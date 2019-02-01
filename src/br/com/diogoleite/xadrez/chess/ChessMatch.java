@@ -6,6 +6,9 @@
 package br.com.diogoleite.xadrez.chess;
 
 import br.com.diogoleite.xadrez.boardgame.Board;
+import br.com.diogoleite.xadrez.boardgame.Position;
+import br.com.diogoleite.xadrez.chess.pieces.King;
+import br.com.diogoleite.xadrez.chess.pieces.Rook;
 
 /**
  *
@@ -16,6 +19,7 @@ public class ChessMatch {
 
     public ChessMatch() {
         board = new Board(8, 8);
+        initialSetup();
     }  
     
     public ChessPiece[][] getPieces(){
@@ -27,5 +31,12 @@ public class ChessMatch {
         }
         
         return chessPieces;
+    }
+    
+    private void initialSetup(){
+        board.placePiece(new King(Color.WHITE, board), new Position(0, 4));
+        
+        board.placePiece(new King(Color.WHITE, board), new Position(7, 4));
+        
     }
 }
