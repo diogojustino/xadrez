@@ -11,11 +11,9 @@ package br.com.diogoleite.xadrez.boardgame;
  */
 public class Piece {
     protected Position position;
-    private Border border;
-    public Piece(){
-    }
+    private Board border;
     
-    public Piece(Border border){
+    public Piece(Board border){
         this.border = border;
     }
 
@@ -27,7 +25,7 @@ public class Piece {
         this.position = position;
     }
 
-    protected Border getBorder() {
+    protected Board getBorder() {
         return border;
     }
     

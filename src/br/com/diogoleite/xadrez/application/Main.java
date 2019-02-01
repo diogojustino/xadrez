@@ -5,6 +5,8 @@
  */
 package br.com.diogoleite.xadrez.application;
 
+import br.com.diogoleite.xadrez.chess.ChessMatch;
+
 /**
  *
  * @author Diogo Leite
@@ -15,7 +17,8 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+         ChessMatch chessMatch = new ChessMatch();
+         UI.printBoard(chessMatch.getPieces());
     }
     
 }
